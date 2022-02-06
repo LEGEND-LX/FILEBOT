@@ -1,0 +1,47 @@
+
+
+
+_get_repolink () {
+    local regex
+    regex='(https?)://github.com/.+/.+'
+    if [[ $LEGEND-LX_REPO == "DRAGONBOT" ]]
+    then
+        echo "aHR0cHM6Ly9naXRodWIuY29tL0xFR0VORC1MWC9QWVRIT05VU0VSQk9UL2FyY2hpdmUvbWFpbi56aXA" | base64 -d
+    elif [[ $LEGEND-LX_REPO == "DRAGONBOT" ]]
+    then
+        echo "aHR0cHM6Ly9naXRodWIuY29tL0xFR0VORC1MWC9QWVRIT05VU0VSQk9UL2FyY2hpdmUvbWFpbi56aXA" | base64 -d
+    elif [[ $LEGEND-LX_REPO =~ $regex ]]
+    then
+        if [[ $LEGEND-LX_REPO_BRANCH ]]
+        then
+            echo "${LEGEND-LX_REPO}/archive/${LEGEND-LX_REPO_BRANCH}.zip"
+        else
+            echo "${LEGEND-LX_REPO}/archive/DRAGONBOT.zip"
+        fi
+    else
+        echo "aHR0cHM6Ly9naXRodWIuY29tL0xFR0VORC1MWC9QWVRIT05VU0VSQk9UL2FyY2hpdmUvbWFpbi56aXA" | base64 -d
+    fi
+}
+
+
+_set_bot () {
+    local zippath
+    zippath="DRAGONBOT.zip"
+    echo "  𓆩🔱 Downloading Pro DragonBot-V3.0 Source Code...🔱𓆪"
+    wget -q $(_get_repolink) -O "$zippath"
+    echo "  Unpacking Data ..."
+    DRAGONPATH=$(zipinfo -1 "$zippath" | grep -v "/.");
+    unzip -qq "$zippath"
+    echo "💥 Download Complete Now Installing 💥"
+    echo "  ✨💫 INSTALLING 𖤍𓆩©Lᴇɢᴇɴᴅx-Pro™𓊉 ✨💫"
+    rm -rf "$zippath"
+    sleep 5
+    cd $DRAGONPATH
+    echo "    🐍ѕταяτιиg ѕмοοτнєѕτ Dragon𝕭ø𝖙 V2.0🐍     "
+    echo " 🤟🏻 NOW WAIT 1 MIN INSTALLING ALL PLUGIN 🤟🏻 "
+
+    python3 ../setup/updater.py ../requirements.txt requirements.txt
+    python3 -m userbot
+}
+
+_set_bot
