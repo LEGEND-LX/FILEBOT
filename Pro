@@ -3,15 +3,15 @@
 _get_repolink () {
     local regex
     regex='(https?)://github.com/.+/.+'
-    if [[ $PRO_REPO == "PROBOT" ]]
+    if [[ $DRAGON_REPO == "DRAGONBOT" ]]
     then
         echo "aHR0cHM6Ly9naXRodWIuY29tL1BST0JPWS1PUC9QUk8tVVNFUkJPVC9hcmNoaXZlL1Byby56aXA=" | base64 -d
-    elif [[ $PRO_REPO == "PROBOT" ]]
+    elif [[ $DRAGON_REPO == "DRAGONBOT" ]]
     then
         echo "aHR0cHM6Ly9naXRodWIuY29tL1BST0JPWS1PUC9QUk8tVVNFUkJPVC9hcmNoaXZlL1Byby56aXA=" | base64 -d
-    elif [[ $PRO_REPO =~ $regex ]]
+    elif [[ $DRAGON_REPO =~ $regex ]]
     then
-        if [[ $PRO_REPO_BRANCH ]]
+        if [[ $DRAGON_REPO_BRANCH ]]
         then
             echo "${PRO_REPO}/archive/${PRO_REPO_BRANCH}.zip"
         else
