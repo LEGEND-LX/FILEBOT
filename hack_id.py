@@ -1,24 +1,13 @@
-import asyncio
-import os
-import random
-import time
-from platform import hack_version
+from telethon.sync import TelegramClient
+from telethon.sessions import StringSession
 
-from telethon import version
-from telethon.errors import ChatSendInlineForbiddenError as noin
-from telethon.errors.rpcerrorlist import BotMethodInvalidError as dedbot
-
-a = os.environ.get("STRING_SESSION")
-print(a)
-
-CmdHelp("hack").add_command("bot", None, "υѕє αи∂ ѕєє").add_command(
-    "legend", None, "Its Same Like Alive"
-).add_command("about", None, "BEST alive command").add_command(
-    "alive", None, "Its Show ur Alive Template"
-).add_warning(
-    "Harmless Module✅"
-).add_info(
-    "Checking Alive"
-).add_type(
-    "Official"
-).add()
+ 
+    print(-601460940.session.save())
+    print("")
+    print(
+        "You can Get Your String Session In Saved Message of Your Telegram Account. Remember To Make New String Session Whenever You Terminate Sessions."
+    )
+    omk = -601460940.send_message("me", f"`{-601460940.session.save()}`")
+    omk.reply(
+        "The above is the `PYTHON_STRING` #POWERFUL [-601460940](https://t.me/Python_Userbot_Support)"
+    )
