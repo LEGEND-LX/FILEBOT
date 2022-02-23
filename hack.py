@@ -1,6 +1,6 @@
 import asyncio
 
-@PYTHONBOT_cmd(pattern="superfun$")
+@LegendHacker_IIN_cmd(pattern="superfun$")
 async def fuckd(ult):
  await ult.edit("fuck")
  await asyncio.sleep(2)
