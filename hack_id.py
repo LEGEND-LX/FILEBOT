@@ -2,7 +2,7 @@ import asyncio
 import os
 import random
 import time
-from platform import python_version
+from platform import hack_version
 
 from telethon import version
 from telethon.errors import ChatSendInlineForbiddenError as noin
